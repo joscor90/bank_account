@@ -4,6 +4,9 @@ class Account
       @name = name
       @balance = balance
     end
+    def display_balance(pin_number)
+        puts self.pin == pin_number ? "Balance: $#{@balance}." : self.pin_error
+      end
     private 
     def pin
       @pin = 1234
