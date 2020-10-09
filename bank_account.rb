@@ -18,17 +18,22 @@ class Account
     public
     def display_balance(pin_number)
         puts self.pin == pin_number ? "Balance: $#{@balance}." : self.pin_error
-      end
-    private 
+    end
 
     def pin
       @pin = 1234
     end
 
-    private
     def pin_error
       "Access denied: incorrect PIN."
     end
 
 end
   
+#test account
+test_account = Account.new('Jose', 1000)
+
+pp test_account
+
+#testing methods
+test_account.withdraw(12332, 500)
